@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+	"$basetexture"					"models\weapons\tfa_reshed\m79\d_79"
+	"$bumpmap" 						"models\weapons\tfa_reshed\m79\n_79"
+    "$color"						"[1 1 1]"
+
+	"$phong"                        "1"
+	"$phongalbedotint"              "1"
+	
+	"$phongtint"                    "[.6 .8 1]"
+	"$phongboost"                   "1.14"
+	"$phongfresnelranges"           "[1 2.5 7]"
+	"$phongexponent"                "27"
+
+
+	"$envmap"                       "env_cubemap"
+	"$normalmapalphaenvmapmask"		"1"
+	"$envmaptint"                   "[0.078 0.078 0.078]"
+
+	"$nocull" "1"
+	
+}

@@ -1,0 +1,24 @@
+"VertexLitGeneric"
+{
+
+
+	"$basetexture"			"models\weapons\tfa_reshed\sv98\flash"
+	"$bumpmap"				"models\weapons\tfa_reshed\sv98\flash_n"
+	"$color"				"[0.9 0.95 1]"
+    "$halflambert" 			"1"
+	"$normalmapalphaenvmapmask" 	"1"
+
+	$phongtint						"[0.6 0.7 0.9]"
+
+	$envmaptint 					"[.085 .085 .085  ]"
+	$phongexponent				 	"120"
+	$phong 							"1"
+	$PhongAlbedoTint 		 		"1"	
+	
+	$phongboost 					"0.5"
+	$phongfresnelranges				"[0.6 0.7 0.9]"
+	$rimlight               1
+	$rimlightexponent       10
+	$rimlightboost          .01	
+	$rimmask 1
+}
