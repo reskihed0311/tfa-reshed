@@ -126,9 +126,7 @@ SWEP.ThirdPersonReloadDisable = false --Disable third person reload?  True disab
 --[[SCOPES]]
 --
 SWEP.IronSightsSensitivity = 1 --Useful for a RT scope.  Change this to 0.25 for 25% sensitivity.  This is if normal FOV compenstaion isn't your thing for whatever reason, so don't change it for normal scopes.
-SWEP.BoltAction = false --Unscope/sight after you shoot?
-SWEP.IronSightsReloadEnabled = true
-SWEP.IronSightsReloadLock = false
+Lock = false
 
 
 
@@ -150,8 +148,12 @@ SWEP.IronSightsPos_2XRDS = Vector( -3.241, -10.32, 0.10 )
 SWEP.IronSightsAng_2XRDS = Vector( 0, -0.051, 0 )
 SWEP.IronSightsPos_C79 = Vector( -3.241, -10, -0.40 )
 SWEP.IronSightsAng_C79 = Vector( 0, 0, 0 )
-SWEP.IronSightsPos_PO4X = Vector( -3.241, -8.32, 0.2 )
+SWEP.IronSightsPos_PO4X = Vector( -3.241, -9, 0.2 )
 SWEP.IronSightsAng_PO4X = Vector( 0, 0, 0 )
+SWEP.IronSightsPos_MX4 = Vector( -3.241, -8.32, -0.2 )
+SWEP.IronSightsAng_MX4 = Vector( 0, -0.01, 0 )
+SWEP.IronSightsPos_Mosin = Vector( -3.241, -8.32, 0.48 )
+SWEP.IronSightsAng_Mosin = Vector( 0, -0.0265, 0 )
 
 SWEP.InspectPos = Vector( 5, -5.619, -2.787 )
 SWEP.InspectAng = Vector( 22.386, 34.417, 5 )
@@ -159,15 +161,7 @@ SWEP.InspectAng = Vector( 22.386, 34.417, 5 )
 SWEP.AllowViewAttachment = true --Allow the view to sway based on weapon attachment while reloading or drawing, IF THE CLIENT HAS IT ENABLED IN THEIR CONVARS.
 
 
-SWEP.IronSightHoldTypeOverride = "" --This variable overrides the ironsights holdtype, choosing it instead of something from the above tables.  Change it to "" to disable.
-SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, choosing it instead of something from the above tables.  Change it to "" to disable.
 
-
-
-SWEP.ProceduralHoslterEnabled = nil
-SWEP.ProceduralHolsterTime = 0.3
-SWEP.ProceduralHolsterPos = Vector( 3, 0, -5 )
-SWEP.ProceduralHolsterAng = Vector( -40, -30, 10 )
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation
 SWEP.Sprint_Mode = TFA.Enum.LOCOMOTION_LUA -- ANI = mdl, HYBRID = ani + lua, Lua = lua only
 SWEP.SprintBobMult = 0
@@ -183,21 +177,12 @@ SWEP.Idle_Smooth = 0.05 --Start an idle this far early into the end of another a
 SWEP.MuzzleAttachment = "1" -- Should be "1" for CSS models or "muzzle" for hl2 models
 SWEP.ShellAttachment = "2" -- Should be "2" for CSS models or "shell" for hl2 models
 SWEP.MuzzleFlashEnabled = true --Enable muzzle flash
-SWEP.MuzzleAttachmentRaw = nil --This will override whatever string you gave.  This is the raw attachment number.  This is overridden or created when a gun makes a muzzle event.
-SWEP.AutoDetectMuzzleAttachment = false --For multi-barrel weapons, detect the proper attachment?
-SWEP.MuzzleFlashEffect = nil --Change to a string of your muzzle flash effect.  Copy/paste one of the existing from the base.
-SWEP.SmokeParticle = nil --Smoke particle (ID within the PCF), defaults to something else based on holdtype; "" to disable
 SWEP.EjectionSmokeEnabled = false --Disable automatic ejection smoke
 --Shell eject override
 SWEP.LuaShellEject = true --Enable shell ejection through lua?
-SWEP.LuaShellEjectDelay = 0 --The delay to actually eject things
+SWEP.LuaShellEjectDelay = 1 --The delay to actually eject things
 SWEP.LuaShellEffect = "RifleShellEject" --The effect used for shell ejection; Defaults to that used for blowback
---Tracer Stuff
-SWEP.TracerName = nil --Change to a string of your tracer name.  Can be custom. There is a nice example at https://github.com/garrynewman/garrysmod/blob/master/garrysmod/gamemodes/base/entities/effects/tooltracer.lua
-SWEP.TracerCount = 3 --0 disables, otherwise, 1 in X chance
---Impact Effects
-SWEP.ImpactEffect = nil --Impact Effect
-SWEP.ImpactDecal = nil --Impact Decal
+
 SWEP.EventTable = {
 [ACT_VM_RELOAD] = {
 { ["time"] = 0.25, ["type"] = "sound", ["value"] = Sound("tfaweapons/sv98/magout.wav") },
@@ -345,7 +330,7 @@ SWEP.VElements = {
         model = "models/weapons/tfa_ins2/upgrades/a_optic_po4x24.mdl",
         bone = "weapon",
         rel = "",
-        pos = Vector( -0.1, -1, -1 ),
+        pos = Vector( -0.1, 0, 1),
         angle = Angle( 90, 0, -90 ),
         size = Vector( 1, 1, 1 ),
         color = Color( 255, 255, 255, 255 ),
@@ -387,6 +372,38 @@ SWEP.VElements = {
         bonemerge = false,
         active = false
     },
+	["scope_mosin"] = {
+        type = "Model",
+        model = "models/weapons/tfa_ins2/upgrades/a_optic_mosin.mdl",
+        bone = "weapon",
+        rel = "",
+        pos = Vector( 0, -0.1, 0 ),
+        angle = Angle(  90, 0, -90 ),
+        size = Vector( 1, 1, 1 ),
+        color = Color( 255, 255, 255, 255 ),
+        surpresslightning = false,
+        material = "",
+        skin = 0,
+        bodygroup = {},
+        active = false,
+        bonemerge = false
+    },
+	["scope_mx4"] = {
+        type = "Model",
+        model = "models/weapons/tfa_ins2/upgrades/a_optic_m40_l.mdl",
+		        bone = "weapon",
+        rel = "",
+        pos = Vector( 0, -0.1, 1.2 ),
+        angle = Angle(  90, 0, -90 ),
+        size = Vector( 1, 1, 1 ),
+        color = Color( 255, 255, 255, 255 ),
+        surpresslightning = false,
+        material = "",
+        skin = 0,
+        bodygroup = {},
+        active = false,
+        bonemerge = false
+    }
 	
 }
 
@@ -405,7 +422,7 @@ SWEP.Attachments = {
     },
     [3] = {
         offset = { 0, 0 },
-        atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x" },
+        atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x", "ins2_si_mosin" , "ins2_si_mx4" },
         order = 2
     },
 }
