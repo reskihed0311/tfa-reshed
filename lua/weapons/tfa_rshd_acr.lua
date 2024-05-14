@@ -18,8 +18,8 @@ SWEP.AutoSwitchFrom			= true		-- Auto switch from if you pick up a better weapon
 SWEP.Weight				= 30			-- This controls how "good" the weapon is for autopickup.
 
 --[[WEAPON HANDLING]]--
-SWEP.Primary.Sound = Sound("tfaweapons/scarh/fire_fp.wav") -- This is the sound of the weapon, when you shoot.
-SWEP.Primary.SilencedSound = Sound("tfaweapons/spear/fire_sil.wav") -- This is the sound of the weapon, when silenced.
+SWEP.Primary.Sound = Sound("tfaweapons/acr/fire_fp.wav") -- This is the sound of the weapon, when you shoot.
+SWEP.Primary.SilencedSound = Sound("tfaweapons/acr/fire_sup.wav") -- This is the sound of the weapon, when silenced.
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Damage = 38 -- Damage, in standard damage points.
 SWEP.Primary.DamageTypeHandled = true --true will handle damagetype in base
@@ -29,7 +29,7 @@ SWEP.Primary.Knockback = nil --Autodetected if nil; this is the velocity kickbac
 SWEP.Primary.HullSize = 0 --Big bullets, increase this value.  They increase the hull size of the hitscan bullet.
 SWEP.Primary.NumShots = 1 --The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 SWEP.Primary.Automatic = true -- Automatic/Semi Auto
-SWEP.Primary.RPM = 600 -- This is in Rounds Per Minute / RPM
+SWEP.Primary.RPM = 700-- This is in Rounds Per Minute / RPM
 SWEP.Primary.RPM_Semi = 1000 -- RPM for semi-automatic or burst fire.  This is in Rounds Per Minute / RPM
 SWEP.Primary.RPM_Burst = nil -- RPM for burst fire, overrides semi.  This is in Rounds Per Minute / RPM
 SWEP.Primary.DryFireDelay = nil --How long you have to wait after firing your last shot before a dryfire animation can play.  Leave nil for full empty attack length.  Can also use SWEP.StatusLength[ ACT_VM_BLABLA ]
@@ -48,7 +48,7 @@ SWEP.OnlyBurstFire = false --No auto, only burst/single?
 SWEP.DefaultFireMode = "" --Default to auto or whatev
 SWEP.FireModeName = nil --Change to a text value to override it
 --Ammo Related
-SWEP.Primary.ClipSize = 20 -- This is the size of a clip
+SWEP.Primary.ClipSize = 30 -- This is the size of a clip
 SWEP.Primary.DefaultClip = 120 -- This is the number of bullets the gun gives you, counting a clip as defined directly above.
 SWEP.Primary.Ammo = "ar2" -- What kind of ammo.  Options, besides custom, include pistol, 357, smg1, ar2, buckshot, slam, SniperPenetratedRound, and AirboatGun.
 SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
@@ -98,18 +98,13 @@ SWEP.Bodygroups_V = nil --{
 --}
 --[[WORLDMODEL]]--
 SWEP.WorldModel			= "models/weapons/w_rif_m4a1.mdl" -- Weapon world model path
-SWEP.Bodygroups_W = nil --{
---[0] = 1,
---[1] = 4,
---[2] = etc.
---}
+
 SWEP.HoldType = "ar2" -- This is how others view you carrying the weapon. Options include:
 -- normal melee melee2 fist knife smg ar2 pistol rpg physgun grenade shotgun crossbow slam passive
 -- You're mostly going to use ar2, smg, shotgun or pistol. rpg and crossbow make for good sniper rifles
 
 --Vector(4.796, 0.964, -0.82), angle = Angle(-5.844, 0, 180)
 
-SWEP.ThirdPersonReloadDisable = false --Disable third person reload?  True disables.
 --[[SCOPES]]--
 SWEP.IronSightsSensitivity = 1 --Useful for a RT scope.  Change this to 0.25 for 25% sensitivity.  This is if normal FOV compenstaion isn't your thing for whatever reason, so don't change it for normal scopes.
 
@@ -122,24 +117,24 @@ SWEP.data = {}
 SWEP.data.ironsights = 1 --Enable Ironsights
 SWEP.Secondary.IronFOV = 80 -- How much you 'zoom' in. Less is more!  Don't have this be <= 0.  A good value for ironsights is like 70.
 
-SWEP.IronSightsPos = Vector(-5.16, -8.983, 1.039)
+SWEP.IronSightsPos = Vector(-3.641, -5.096, 1.08)
 SWEP.IronSightsAng = Vector(0, 0, 0)
 
 
 
-SWEP.IronSightsPos_RDS = Vector(-5.19, -5, 1)
+SWEP.IronSightsPos_RDS = Vector(-3.641, -5.096, 0.20)
 SWEP.IronSightsAng_RDS = Vector(0, 0, 0)
 
-SWEP.IronSightsPos_2XRDS = Vector(-5.19, -10, 1)
+SWEP.IronSightsPos_2XRDS = Vector(-3.641, -5.096, 0.20)
 SWEP.IronSightsAng_2XRDS = Vector(0, 0, 0)
 
-SWEP.IronSightsPos_EOTech = Vector(-5.19, -5, 1)
+SWEP.IronSightsPos_EOTech = Vector(-3.641, -5.096, 0.32)
 SWEP.IronSightsAng_EOTech = Vector(0, 0, 0)
 
-SWEP.IronSightsPos_Kobra = Vector(-5.19, -5, 1)
+SWEP.IronSightsPos_Kobra = Vector(-3.641, -5.096, 0.45)
 SWEP.IronSightsAng_Kobra = Vector(0, 0, 0)
 
-SWEP.IronSightsPos_C79 = Vector(-5.19, -10, 0.4)
+SWEP.IronSightsPos_C79 = Vector(-3.641, -5.096, 0.32)
 SWEP.IronSightsAng_C79 = Vector(0, 0, 0)
 
 --[[INSPECTION]]--
@@ -177,30 +172,23 @@ SWEP.EjectionSmokeEnabled = false --Disable automatic ejection smoke
 SWEP.LuaShellEject = true --Enable shell ejection through lua?
 SWEP.LuaShellEjectDelay = 0 --The delay to actually eject things
 SWEP.LuaShellEffect = "RifleShellEject" --The effect used for shell ejection; Defaults to that used for blowback
---Tracer Stuff
-SWEP.TracerName 		= nil 	--Change to a string of your tracer name.  Can be custom. There is a nice example at https://github.com/garrynewman/garrysmod/blob/master/garrysmod/gamemodes/base/entities/effects/tooltracer.lua
-SWEP.TracerCount 		= 3 	--0 disables, otherwise, 1 in X chance
---Impact Effects
-SWEP.ImpactEffect = nil--Impact Effect
-SWEP.ImpactDecal = nil--Impact Decal
+
 
 SWEP.EventTable = {
 [ACT_VM_RELOAD] = {
-{ ["time"] = 0, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/raise.wav") },
-{ ["time"] = 0.2, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/magout.wav") },
-{ ["time"] = 0.9, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/raise.wav") },
-{ ["time"] = 1.6, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/magin.wav") },
-{ ["time"] = 2, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/drop.wav") },
+	{ ["time"] = 0.2, ["type"] = "sound", ["value"] = Sound("tfaweapons/acr/magout.wav") },
+	{ ["time"] = 1.1, ["type"] = "sound", ["value"] = Sound("tfaweapons/acr/maghit.wav") },
+	{ ["time"] = 1.25, ["type"] = "sound", ["value"] = Sound("tfaweapons/acr/magin.wav") },
+	{ ["time"] = 1.55, ["type"] = "sound", ["value"] = Sound("tfaweapons/acr/magslap.wav") },
 },
 
 [ACT_VM_RELOAD_EMPTY] = {
-{ ["time"] = 0, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/raise.wav") },
-{ ["time"] = 0.2, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/magout.wav") },
-{ ["time"] = 0.9, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/raise.wav") },
-{ ["time"] = 1.6, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/magin.wav") },
-{ ["time"] = 2, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/drop.wav") },
-{ ["time"] = 2.1, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/charge.wav") },
-{ ["time"] = 2.5, ["type"] = "sound", ["value"] = Sound("tfaweapons/scarh/drop.wav") },
+	{ ["time"] = 0.2, ["type"] = "sound", ["value"] = Sound("tfaweapons/acr/magout.wav") },
+	{ ["time"] = 1.1, ["type"] = "sound", ["value"] = Sound("tfaweapons/acr/maghit.wav") },
+	{ ["time"] = 1.25, ["type"] = "sound", ["value"] = Sound("tfaweapons/acr/magin.wav") },
+	{ ["time"] = 1.55, ["type"] = "sound", ["value"] = Sound("tfaweapons/acr/magslap.wav") },
+	{ ["time"] = 1.81, ["type"] = "sound", ["value"] = Sound("tfaweapons/acr/boltback.wav") },
+	{ ["time"] = 1.92, ["type"] = "sound", ["value"] = Sound("tfaweapons/acr/boltfwd.wav") },
 }}
 
 SWEP.ViewModelBoneMods = {}
@@ -226,16 +214,16 @@ SWEP.VFGGripBadActivities = {
 
 
 SWEP.VElements = {
-	["sights_folded"] = { type = "Model", model = "models/weapons/tfa_reshed_scarh_irons.mdl", bone = "weapon", rel = "", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = true, bonemerge = true },
-	["sight_kobra"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_optic_kobra.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.5, 0), angle = Angle(90, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false },
+	["sights_folded"] = { type = "Model", model = "models/weapons/tfa_reshed_acr_sights.mdl", bone = "weapon", rel = "", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = true, bonemerge = true },
+	["sight_kobra"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_optic_kobra.mdl", bone = "weapon", rel = "", pos = Vector(0, 0, 0), angle = Angle(90, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false },
 	["sight_kobra_lens"] = (TFA.INS2 and TFA.INS2.GetHoloSightReticle) and TFA.INS2.GetHoloSightReticle("sight_kobra") or nil,
-	["sight_eotech"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_optic_eotech.mdl",  bone = "weapon", rel = "", pos = Vector(0, -2.5, 0), angle = Angle(90, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false },
+	["sight_eotech"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_optic_eotech.mdl",  bone = "weapon", rel = "", pos = Vector(0, 0, 0), angle = Angle(90, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false },
 	["sight_eotech_lens"] = (TFA.INS2 and TFA.INS2.GetHoloSightReticle) and TFA.INS2.GetHoloSightReticle("sight_eotech") or nil,
-	["sight_rds"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_optic_aimpoint.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.5, 0), angle = Angle(90, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false },
+	["sight_rds"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_optic_aimpoint.mdl", bone = "weapon", rel = "", pos = Vector(0, 0, 0), angle = Angle(90, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false },
 	["sight_rds_lens"] = (TFA.INS2 and TFA.INS2.GetHoloSightReticle) and TFA.INS2.GetHoloSightReticle("sight_rds") or nil,
-	["scope_2xrds"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_optic_aimp2x.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.5, 0), angle = Angle(90, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false },
+	["scope_2xrds"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_optic_aimp2x.mdl", bone = "weapon", rel = "", pos = Vector(0, 0, 0), angle = Angle(90, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false },
 	["scope_2xrds_lens"] = { type = "Model", model = "models/rtcircle.mdl", bone = "Lense_RT", rel = "scope_2xrds", pos = Vector(0, 0, -0.108), angle = Angle(-90, 0, -90), size = Vector(0.3, 0.3, 0.3), color = Color(255, 255, 255, 255), surpresslightning = false, material = "!tfa_rtmaterial", skin = 0, bodygroup = {}, active = false },
-	["scope_c79"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_optic_elcan.mdl", bone = "weapon", rel = "", pos = Vector(0, -2.5, 0), angle = Angle(90, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false },
+	["scope_c79"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_optic_elcan.mdl", bone = "weapon", rel = "", pos = Vector(0, 0, 0), angle = Angle(90, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false },
 	["scope_c79_lens"] = { type = "Model", model = "models/rtcircle.mdl", bone = "Lense_RT", rel = "scope_c79", pos = Vector(0, -0.08, 0), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "!tfa_rtmaterial", skin = 0, bodygroup = {}, active = false },
 	["suppressor"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_suppressor_sec.mdl", bone = "muzzle", rel = "", pos = Vector(0.1, -0.05, -3), angle = Angle(90, 0, 0), size = Vector(0.9, 0.9, 0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} , bonemerge = false, active = false },
 	["laser_beam"] = { type = "Model", model = "models/tfa/lbeam.mdl", bone = "A_LaserFlashlight", rel = "laser", pos = Vector(0,-2,-0.1), angle = Angle(0, 0, 0), size = Vector(2, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = false, active = false },

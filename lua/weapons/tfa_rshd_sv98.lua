@@ -431,7 +431,7 @@ SWEP.Attachments = {
 
 
 
-SWEP.MuzzleAttachmentSilenced = 2
+SWEP.MuzzleAttachmentSilenced = 1
 SWEP.LaserSightModAttachment = 1
 SWEP.LaserSightModAttachmentWorld = 8
 SWEP.RTAttachment_2XRDS = 7

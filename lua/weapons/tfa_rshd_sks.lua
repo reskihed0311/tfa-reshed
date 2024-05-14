@@ -534,7 +534,7 @@ SWEP.AttachmentExclusions = {
 --[[   ["ins2_ub_laser"] = { "ins2_fg_gp25", "ins2_br_supp" } ]]--
 }
 
-SWEP.MuzzleAttachmentSilenced = 3
+SWEP.MuzzleAttachmentSilenced = 1
 SWEP.LaserSightModAttachment = 1
 SWEP.LaserSightModAttachmentWorld = 8
 SWEP.RTAttachment_2XRDS = 7

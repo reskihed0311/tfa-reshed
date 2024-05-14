@@ -319,7 +319,7 @@ SWEP.Attachments = {
 SWEP.AttachmentDependencies = {	["ins2_ub_laser"] = { "npcz_ar15_ris_barrel", "npcz_ar15_ext_ris_barrel" }}--{["si_acog"] = {"bg_rail"}}
 SWEP.AttachmentExclusions = { ["ins2_ub_laser"] = {"ar15_magpul_barrel", "ar15_m16_barrel"}}
 
-SWEP.MuzzleAttachmentSilenced = 3
+SWEP.MuzzleAttachmentSilenced = 1
 
 SWEP.LaserSightModAttachment = 1
 SWEP.LaserSightModAttachmentWorld = 10

@@ -55,9 +55,9 @@ SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
-SWEP.Primary.KickUp = 0.8 -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickUp = 0.5 -- This is the maximum upwards recoil (rise)
 SWEP.Primary.KickDown = 0.4 -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal = 0.6 -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.KickHorizontal = 0 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 0.5 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
 SWEP.Primary.Spread = .02 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
@@ -310,7 +310,7 @@ SWEP.Attachments = {
 SWEP.AttachmentDependencies = {	["ins2_ub_laser"] = { "npcz_ar15_ris_barrel", "npcz_ar15_ext_ris_barrel" }}--{["si_acog"] = {"bg_rail"}}
 SWEP.AttachmentExclusions = { ["ins2_ub_laser"] = {"ar15_magpul_barrel", "ar15_m16_barrel"}}
 
-SWEP.MuzzleAttachmentSilenced = 3
+SWEP.MuzzleAttachmentSilenced = 1
 
 SWEP.LaserSightModAttachment = 1
 SWEP.LaserSightModAttachmentWorld = 10
