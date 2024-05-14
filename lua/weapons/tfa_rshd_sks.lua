@@ -194,7 +194,7 @@ SWEP.InspectAng = Vector( 22.386, 34.417, 5 )
 SWEP.AllowViewAttachment = true --Allow the view to sway based on weapon attachment while reloading or drawing, IF THE CLIENT HAS IT ENABLED IN THEIR CONVARS.
 --[[VIEWMODEL BLOWBACK]]
 --
-SWEP.BlowbackEnabled = true --Enable Blowback?
+SWEP.BlowbackEnabled = false --Enable Blowback?
 SWEP.BlowbackVector = Vector( 0, -2, 0 ) --Vector to move bone <or root> relative to bone <or view> orientation.
 SWEP.BlowbackCurrentRoot = 0 --Amount of blowback currently, for root
 SWEP.BlowbackCurrent = 0 --Amount of blowback currently, for bones
