@@ -29,7 +29,7 @@ SWEP.Primary.Knockback = nil --Autodetected if nil; this is the velocity kickbac
 SWEP.Primary.HullSize = 0 --Big bullets, increase this value.  They increase the hull size of the hitscan bullet.
 SWEP.Primary.NumShots = 1 --The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 SWEP.Primary.Automatic = true -- Automatic/Semi Auto
-SWEP.Primary.RPM = 700-- This is in Rounds Per Minute / RPM
+SWEP.Primary.RPM = 600-- This is in Rounds Per Minute / RPM
 SWEP.Primary.RPM_Semi = 1000 -- RPM for semi-automatic or burst fire.  This is in Rounds Per Minute / RPM
 SWEP.Primary.RPM_Burst = nil -- RPM for burst fire, overrides semi.  This is in Rounds Per Minute / RPM
 SWEP.Primary.DryFireDelay = nil --How long you have to wait after firing your last shot before a dryfire animation can play.  Leave nil for full empty attack length.  Can also use SWEP.StatusLength[ ACT_VM_BLABLA ]
@@ -122,16 +122,16 @@ SWEP.IronSightsAng = Vector(0, 0, 0)
 
 
 
-SWEP.IronSightsPos_RDS = Vector(-3.641, -5.096, 0.20)
+SWEP.IronSightsPos_RDS = Vector(-3.441, -7.711, -0.28)
 SWEP.IronSightsAng_RDS = Vector(0, 0, 0)
 
-SWEP.IronSightsPos_2XRDS = Vector(-3.641, -5.096, 0.20)
+SWEP.IronSightsPos_2XRDS = Vector(-3.441, -7.711, -0.28)
 SWEP.IronSightsAng_2XRDS = Vector(0, 0, 0)
 
-SWEP.IronSightsPos_EOTech = Vector(-3.641, -5.096, 0.32)
+SWEP.IronSightsPos_EOTech = Vector(-3.441, -7.711, -0.1)
 SWEP.IronSightsAng_EOTech = Vector(0, 0, 0)
 
-SWEP.IronSightsPos_Kobra = Vector(-3.641, -5.096, 0.45)
+SWEP.IronSightsPos_Kobra = Vector(-3.441, -7.711, 0)
 SWEP.IronSightsAng_Kobra = Vector(0, 0, 0)
 
 SWEP.IronSightsPos_C79 = Vector(-3.641, -5.096, 0.32)
@@ -193,15 +193,17 @@ SWEP.ViewModelBoneMods = {}
 
 
 SWEP.VFGGripBoneMods = {
-	["ValveBiped.Bip01_L_Finger1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, -43.322, 0) },
-	["ValveBiped.Bip01_L_Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(25.104, 46.88, 2.47) },
-	["ValveBiped.Bip01_L_Finger4"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(17.868, 0, 0) },
-	["ValveBiped.Bip01_L_Finger01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(9.538, 51.562, 20.53) },
-	["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(9.406, 8.663, 0) },
-	["ValveBiped.Bip01_L_Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(6.868, -36.486, 0) },
-	["ValveBiped.Bip01_L_Finger3"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(10.854, -15.164, 12.67) },
-	["ValveBiped.Bip01_L_Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-2.425, -0.548, -1.741), angle = Angle(0, 0, 0) },
-	["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-31.157, 4.289, 26.579) }
+	["ValveBiped.Bip01_L_Finger1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-18.129, -57.385, 0) },
+	["ValveBiped.Bip01_L_Finger11"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, -43.645, 0) },
+	["ValveBiped.Bip01_L_Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(3.487, 26.156, -59.538) },
+	["ValveBiped.Bip01_L_Finger4"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(19.502, 0, -11.601) },
+	["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(23.368, -2.007, 21.111) },
+	["ValveBiped.Bip01_L_Finger2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(3.114, -43.862, 6.978) },
+	["ValveBiped.Bip01_L_Finger01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(4.967, 17.152, -16.114) },
+	["ValveBiped.Bip01_L_Finger3"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(17.679, -29.612, -14.377) },
+	["ValveBiped.Bip01_L_Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-2.244, 1.83, -1), angle = Angle(0, 0, 0) },
+	["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-36.263, -3.478, 57.861) }
+
 
 
 }
@@ -227,7 +229,7 @@ SWEP.VElements = {
 	["scope_c79_lens"] = { type = "Model", model = "models/rtcircle.mdl", bone = "Lense_RT", rel = "scope_c79", pos = Vector(0, -0.08, 0), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "!tfa_rtmaterial", skin = 0, bodygroup = {}, active = false },
 	["suppressor"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_suppressor_sec.mdl", bone = "muzzle", rel = "", pos = Vector(0.1, -0.05, -3), angle = Angle(90, 0, 0), size = Vector(0.9, 0.9, 0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} , bonemerge = false, active = false },
 	["laser_beam"] = { type = "Model", model = "models/tfa/lbeam.mdl", bone = "A_LaserFlashlight", rel = "laser", pos = Vector(0,-2,-0.1), angle = Angle(0, 0, 0), size = Vector(2, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = false, active = false },
-   ["vfg"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_foregrip_sec.mdl", bone = "weapon", rel = "", pos = Vector(0, 2.563, 8.729), angle = Angle(90, 0, -90), size = Vector(0.4, 0.4, 0.4), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false }
+   ["vfg"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_foregrip_sec.mdl", bone = "weapon", rel = "",  pos = Vector(0, 2.809, 8.942), angle = Angle(90, 0, -90), size = Vector(0.4, 0.4, 0.4), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false, bonemerge = false }
 
 
 }
