@@ -252,7 +252,7 @@ SWEP.EventTable = {
 }}
 
 SWEP.ViewModelBoneMods = {
-	["Muzzle"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["muzzle"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
 }
 
 SWEP.VFGGripBoneMods = {
@@ -291,9 +291,7 @@ SWEP.VElements = {
 	["suppressor"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_suppressor_sec.mdl", bone = "muzzle", rel = "", pos = Vector(0.1, -0.05, -3), angle = Angle(90, 0, 0), size = Vector(0.9, 0.9, 0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} , bonemerge = false, active = false },
 	["basebarrel"] = { type = "Model", model = "models/weapons/tfa_reshed_ar15_m4hg.mdl", bone = "Weapon", rel = "", pos = Vector(0, 0, 0.25), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = true},
 	["magpulbarrel"] = { type = "Model", model = "models/weapons/tfa_reshed_ar15_moehg.mdl", bone = "Weapon", rel = "", pos = Vector(0, 0, 0.25), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = false},
-	["m16barrel"] = { type = "Model", model = "models/weapons/tfa_reshed_ar15_m16.mdl", bone = "Weapon", rel = "", pos = Vector(0, 0, 0.25), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = false},
 	["risbarrel"] = { type = "Model", model = "models/weapons/tfa_reshed_ar15_ris.mdl", bone = "Weapon", rel = "", pos = Vector(0, 0, 0.25), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = false},
-	["risextbarrel"] = { type = "Model", model = "models/weapons/tfa_reshed_ar15_m16ris.mdl", bone = "Weapon", rel = "", pos = Vector(0, 0, 0.25), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = false},
 	["at_vfg"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_foregrip_sec.mdl", bone = "A_Foregrip", rel = "", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = false},
 	["basestock"] = { type = "Model", model = "models/weapons/tfa_reshed_ar15_m4stock.mdl", bone = "Weapon", rel = "", pos = Vector(0, -0.9, 0.3), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = true},
 	["magpulstock"] = { type = "Model", model = "models/weapons/tfa_reshed_ar15_moestock.mdl", bone = "Weapon", rel = "", pos = Vector(0, -0.9, 0.3), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = false},
@@ -314,7 +312,7 @@ SWEP.Attachments = {
 	[4] = { offset = { 0, 0 }, atts = { "rshd_vfg" }, order = 4 },
 	[5] = { offset = { 0, 0 }, atts = { "rshd_ar15_magpul_stock", "rshd_ar15_m16_stock" }, order = 6 },
 	[6] = { offset = { 0, 0 }, atts = { "ins2_ub_laser" }, order = 7 },
-	[8] = { offset = { 0, 0 }, atts = { "rshd_ar15_magpul_barrel", "rshd_ar15_m16_barrel", "rshd_ar15_ris_barrel", "rshd_ar15_ext_ris_barrel" }, order = 3 }
+	[8] = { offset = { 0, 0 }, atts = { "rshd_ar15_magpul_barrel",  "rshd_ar15_ris_barrel" }, order = 3 }
 }
 SWEP.AttachmentDependencies = {	["ins2_ub_laser"] = { "npcz_ar15_ris_barrel", "npcz_ar15_ext_ris_barrel" }}--{["si_acog"] = {"bg_rail"}}
 SWEP.AttachmentExclusions = { ["ins2_ub_laser"] = {"ar15_magpul_barrel", "ar15_m16_barrel"}}

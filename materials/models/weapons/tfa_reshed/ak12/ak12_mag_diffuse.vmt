@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+     "$basetexture" "models\weapons\tfa_reshed\ak12/ak12_mag_diffuse.vtf"
+     "$bumpmap" "models\weapons\tfa_reshed\ak12/ak12_mag_bump.vtf"
+     $phongexponenttexture "color/white"
+     "$normalmapalphaenvmapmask" "1"
+	"$color"			"[1 1 1]"
+	
+	"$envmap" 			"env_cubemap"
+	"$envmaptint" 			"[.007 .007 .007]"
+
+	"$phong" 			"1"
+	"$phongexponent"		"20"
+	"$phongboost" 			"128"
+	"$phongfresnelranges"		"[0.5 1.5 3.0]"//"[0.1 0.4 .8]"
+	"$halflambert"			"1"
+	$phongalbedotint "1"
+	
+	//"$rimlight" 0
+	//"$rimlightexponent" 15
+}
