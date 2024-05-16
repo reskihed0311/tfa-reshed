@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\weapons\tfa_reshed\m110/lense_d"
+	"$bumpmap" "models\weapons\tfa_reshed\m110/lense_n"
+	"$translucent" 1
+}
