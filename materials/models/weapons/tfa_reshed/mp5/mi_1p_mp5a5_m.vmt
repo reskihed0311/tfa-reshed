@@ -1,0 +1,29 @@
+"VertexLitGeneric"
+{
+	"$basetexture"              "models\weapons\tfa_reshed\mp5\T_1P_MP5A5_D"
+	"$bumpmap"                  "models\weapons\tfa_reshed\mp5\T_1P_MP5A5_N"
+	"$phongexponenttexture"     "models\weapons\tfa_reshed\mp5\T_1P_MP5A5_M"
+	"$color2"					"[0.70 0.70 0.70]"
+	"$translucent"				"1"
+//	"$basemapalphaenvmapmask"   "1"
+
+	"$phong"					"1"
+	"$phongexponent"			"100"
+	"$phongboost"				"80"
+	"$phongfresnelranges"	    "[0.6 0.8 0.7]"
+	"$phongalbedotint" 			"1"
+	"$phongalbedoboost" 		"50"
+	
+	"$envmap"					"env_cubemap"
+	"$envmaptint"				"[ .035 .035 .035 ]"
+	"$envmapfresnel"			"1"
+	"$normalmapalphaenvmapmask" "1"
+//	"$normalmapalphaphongmask"  "1"
+
+	"$rimlight"					"1"
+	"$rimlightexponent"			"150"	
+	"$rimlightboost"			"0.08"
+	"$rimmask"					"1"
+	
+    "$ambientocclusion"         "1"
+}
