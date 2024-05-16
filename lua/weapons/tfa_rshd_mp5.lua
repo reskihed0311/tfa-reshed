@@ -423,12 +423,12 @@ SWEP.VElements = {
     },
     ["suppressor"] = {
         type = "Model",
-        model = "models/weapons/tfa_ins2/upgrades/a_suppressor_ak.mdl",
+        model = "models/weapons/tfa_ins2/upgrades/a_suppressor_ins.mdl",
         bone = "weapon",
         rel = "",
-        pos = Vector( 0, 1.1, 22 ),
+        pos = Vector( 0, -0.9, 13 ),
         angle = Angle( 90, 0, 0 ),
-        size = Vector( 0.7, 0.7, 0.7 ),
+        size = Vector( 0.5, 0.5, 0.5 ),
         color = Color( 255, 255, 255, 255 ),
         surpresslightning = false,
         material = "",
@@ -465,7 +465,7 @@ SWEP.Attachments = {
         atts = { "rshd_vfg" },
         order = 2
     },
-
+	[4] = { offset = { 0, 0 }, atts = { "ins2_br_supp" }, order = 4 },
     [2] = {
         offset = { 0, 0 },
         atts = { "am_match", "am_magnum" },
@@ -506,7 +506,7 @@ SWEP.AttachmentExclusions = {
 --[[   ["ins2_ub_laser"] = { "ins2_fg_gp25", "ins2_br_supp" } ]]--
 }
 
-SWEP.MuzzleAttachmentSilenced = 3
+SWEP.MuzzleAttachmentSilenced = 1
 SWEP.LaserSightModAttachment = 1
 SWEP.LaserSightModAttachmentWorld = 8
 SWEP.RTAttachment_2XRDS = 7
