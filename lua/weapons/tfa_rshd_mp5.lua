@@ -21,7 +21,8 @@ SWEP.Weight = 30 -- This controls how "good" the weapon is for autopickup.
 --[[WEAPON HANDLING]]
 --
 SWEP.Primary.Sound = "tfaweapons/mp5/fire_fp.wav" -- This is the sound of the weapon, when you shoot.
-SWEP.Silenced                     = true -- Silenced by default?
+SWEP.Primary.SilencedSound      = "tfaweapons/ump45/fire_sil.wav" -- This is the sound of the weapon, when silenced.
+SWEP.Silenced                     = false -- Silenced by default?
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Damage = 21 -- Damage, in standard damage points.
 SWEP.Primary.DamageTypeHandled = true --true will handle damagetype in base
