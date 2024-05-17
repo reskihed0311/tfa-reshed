@@ -289,22 +289,6 @@ SWEP.AnimCycle = 0 -- Start on the right
 
 
 SWEP.VElements = {
-    ["rail_sights"] = {
-        type = "Model",
-        model = "models/weapons/atts/tfa_reshed_rail_mp5.mdl",
-        bone = "weapon",
-        rel = "",
-        pos = Vector( 0, -2.5, 1 ),
-        angle = Angle( 90, 0, -90 ),
-        size = Vector( 1, 1, 1 ),
-        color = Color( 255, 255, 255, 255 ),
-        surpresslightning = false,
-        material = "",
-        skin = 0,
-        bodygroup = {},
-        active = false,
-        bonemerge = false
-    },
     ["sight_kobra"] = {
         type = "Model",
         model = "models/weapons/tfa_ins2/upgrades/a_optic_kobra.mdl",

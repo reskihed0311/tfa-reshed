@@ -134,7 +134,7 @@ SWEP.IronSightsAng_EOTech = Vector(0, 0, 0)
 SWEP.IronSightsPos_Kobra = Vector(-3.641, -5.096, 0.45)
 SWEP.IronSightsAng_Kobra = Vector(0, 0, 0)
 
-SWEP.IronSightsPos_C79 = Vector(-3.641, -5.096, 0.32)
+SWEP.IronSightsPos_C79 = Vector(-3.641, -5.096, -0.45)
 SWEP.IronSightsAng_C79 = Vector(0, 0, 0)
 
 --[[INSPECTION]]--
